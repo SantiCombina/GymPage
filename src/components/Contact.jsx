@@ -1,4 +1,4 @@
-import { BsFillTelephoneFill } from "react-icons/Bs";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 export const Contact = ({ contactRef }) => {
   return (
