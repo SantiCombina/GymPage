@@ -1,7 +1,7 @@
 import { useSpringCarousel } from "react-spring-carousel";
 import { GalleryData } from "../data/GalleryData";
 import { useBreakpoint } from "../hooks/useBreakpoint";
-import { SlArrowRight, SlArrowLeft } from "react-icons/Sl";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 export const Gallery = ({ galleryRef }) => {
   const breakpoint = useBreakpoint();
