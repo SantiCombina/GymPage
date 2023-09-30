@@ -20,7 +20,11 @@ export const About = ({ aboutRef }) => {
           officia? Laboriosam harum quae quo. Ex, deleniti!
         </p>
       </div>
-      <img src="./assets/aboutSection.png" alt="imagen" className="h-80" />
+      <img
+        src="./assets/aboutSection.png"
+        alt="imagen"
+        className="select-none h-80"
+      />
     </div>
   );
 };

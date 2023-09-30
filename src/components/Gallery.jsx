@@ -13,7 +13,7 @@ export const Gallery = ({ galleryRef }) => {
           <div className="flex justify-center w-full h-full">
             <img
               src={item.renderItem}
-              className="transition-all duration-1000 hover:scale-105 lg:w-[400px] lg:h-[225px] w-[225px] h-[112px] object-cover"
+              className="transition-all duration-1000 hover:scale-105 lg:w-[400px] lg:h-[225px] w-[225px] h-[112px] select-none object-cover"
               alt="imagen"
             />
           </div>
