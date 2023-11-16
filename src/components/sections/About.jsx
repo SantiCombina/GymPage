@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <section
       ref={aboutRef}
-      className="flex flex-col items-center justify-between w-full min-h-screen gap-8 py-20 lg:flex-row"
+      className="flex items-center justify-center w-full min-h-screen gap-8 py-20 flex-col lg:flex-row px-6 max-w-notebook"
     >
       <div className="flex flex-col flex-1 w-full">
         <h3 className="text-primary">DESCUBRE MÁS</h3>

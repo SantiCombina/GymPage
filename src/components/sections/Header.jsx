@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <section
       ref={headerRef}
-      className="h-screen bg-center bg-no-repeat bg-cover -mx-28 bg-hero-main"
+      className="h-screen w-full bg-center bg-no-repeat bg-cover bg-hero-main"
     >
       <h1 className="flex items-center justify-center h-full text-6xl font-extrabold">
         EMPIEZA HOY
