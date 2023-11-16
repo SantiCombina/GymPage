@@ -3,9 +3,17 @@ import { GalleryData } from "../../data/GalleryData";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import { GlobalContext } from "../../context/GlobalContext";
-import { useContext } from "react";
+import { useContext, useMemo, useState } from "react";
+import { Modal } from "../ui/Modal";
 
 export const Gallery = () => {
+  const [galleryModal, setGalleryModal] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const modalItem = useMemo(() => {
+    return GalleryData.find((item) => item.id === selectedItem);
+  }, [selectedItem]);
+
   const { galleryRef } = useContext(GlobalContext);
   const breakpoint = useBreakpoint();
   const { carouselFragment, slideToNextItem, slideToPrevItem } =
@@ -13,8 +21,12 @@ export const Gallery = () => {
       items: GalleryData.map((item) => ({
         id: item.id,
         renderItem: (
-          <div className="flex justify-center w-full h-full">
+          <div className="flex justify-center w-full h-full cursor-pointer">
             <img
+              onClick={() => {
+                setGalleryModal(true);
+                setSelectedItem(item.id);
+              }}
               src={item.renderItem}
               className="transition-all duration-1000 hover:scale-105 lg:w-[400px] lg:h-[225px] w-[225px] h-[112px] select-none object-cover"
               alt="imagen"
@@ -30,11 +42,11 @@ export const Gallery = () => {
   return (
     <section
       ref={galleryRef}
-      className="flex flex-col items-center justify-center min-h-screen"
+      className="flex flex-col items-center justify-center w-full min-h-screen px-6 bg-secondary"
     >
       <h3 className="text-primary">MIRA COMO SE VE NUESTRO GYM</h3>
       <h2 className="text-3xl">CONOCE NUESTRO ESPACIO</h2>
-      <div className="flex py-6">
+      <div className="flex justify-center py-5 max-w-notebook">
         <button onClick={slideToPrevItem} className="text-6xl">
           <SlArrowLeft className="text-5xl" />
         </button>
@@ -45,6 +57,11 @@ export const Gallery = () => {
           <SlArrowRight className="text-5xl" />
         </button>
       </div>
+      {galleryModal && (
+        <Modal visible={galleryModal} onClose={() => setGalleryModal(false)}>
+          <img src={modalItem.renderItem} alt="" />
+        </Modal>
+      )}
     </section>
   );
 };
