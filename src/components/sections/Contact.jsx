@@ -7,7 +7,7 @@ export const Contact = () => {
   return (
     <section
       ref={contactRef}
-      className="flex items-center justify-center w-full min-h-screen bg-secondary"
+      className="flex items-center justify-center w-full min-h-screen px-6 py-20 bg-secondary"
     >
       <div className="flex justify-between w-full p-6 rounded-lg bg-primary max-w-notebook">
         <div className="flex flex-col w-full gap-4">

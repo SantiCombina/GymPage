@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <section
       ref={aboutRef}
-      className="flex items-center justify-center w-full min-h-screen gap-8 py-20 flex-col lg:flex-row px-6 max-w-notebook"
+      className="flex items-center justify-center w-full min-h-screen py-20 flex-col lg:flex-row px-6 max-w-notebook"
     >
       <div className="flex flex-col flex-1 w-full">
         <h3 className="text-primary">DESCUBRE MÁS</h3>
@@ -27,7 +27,7 @@ export const About = () => {
       <img
         src="./assets/aboutSection.png"
         alt="imagen"
-        className="flex flex-1 object-contain h-auto select-none max-h-80"
+        className="flex flex-1 object-contain select-none max-h-80"
       />
     </section>
   );
