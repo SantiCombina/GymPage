@@ -6,22 +6,22 @@ export const About = () => {
   return (
     <section
       ref={aboutRef}
-      className="flex items-center justify-center w-full min-h-screen py-20 flex-col lg:flex-row px-6 max-w-notebook"
+      className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-20 lg:flex-row max-w-notebook"
     >
       <div className="flex flex-col flex-1 w-full">
         <h3 className="text-primary">DESCUBRE MÁS</h3>
         <h2 className="text-3xl">SOBRE NOSOTROS</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus alias,
-          qui suscipit natus veniam illum sit adipisci, ut et numquam quos id
-          rerum, in odit saepe aperiam? Nulla, commodi sapiente. Facilis,
-          pariatur. Impedit pariatur eaque quas reprehenderit in. Necessitatibus
-          autem nam suscipit illum, at nisi minima enim quidem laborum eaque?
-          Esse atque inventore, maxime neque eius corrupti sint incidunt enim!
-          Recusandae, nihil! Perspiciatis optio rem adipisci nostrum quibusdam.
-          Ipsum maiores quo quam eaque perspiciatis necessitatibus, ea
-          perferendis. Error inventore sunt, necessitatibus excepturi saepe
-          officia? Laboriosam harum quae quo. Ex, deleniti!
+          ¡Bienvenido a nuestro gimnasio, donde la transformación personal se
+          encuentra con la pasión por el bienestar! En nuestro espacio dedicado
+          al fitness, nos esforzamos por inspirar y motivar a cada miembro a
+          alcanzar sus metas de salud y a descubrir su mejor versión. Con un
+          equipo de entrenadores apasionados y una variedad de clases
+          innovadoras, ofrecemos un ambiente acogedor y motivador para que
+          puedas disfrutar del viaje hacia una vida más saludable. En nuestro
+          gimnasio, no solo es sobre el ejercicio, sino también sobre la
+          comunidad y el apoyo mutuo. Únete a nosotros en este emocionante viaje
+          hacia el bienestar total. ¡Tu éxito es nuestro compromiso!
         </p>
       </div>
       <img

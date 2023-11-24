@@ -1,9 +1,10 @@
 import { useContext } from "react";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaWhatsapp } from "react-icons/fa";
 import { GlobalContext } from "../../context/GlobalContext";
 
 export const Contact = () => {
   const { contactRef } = useContext(GlobalContext);
+
   return (
     <section
       ref={contactRef}
@@ -15,14 +16,14 @@ export const Contact = () => {
             <h3 className="text-primary">CONTACTO</h3>
             <h2 className="text-3xl">ESTAMOS ANSIOSIOS POR VERTE</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Dignissimos ratione excepturi molestiae nesciunt et repudiandae
-              similique quo doloribus aut placeat architecto, tempora quos nisi
-              ea veniam. Modi, sed necessitatibus? Ea?
+              ¡Nos encantaría saber de ti! Si tienes preguntas, sugerencias o
+              simplemente deseas conocernos mejor, no dudes en ponerte en
+              contacto. Estamos aquí para ayudarte en cada paso de tu viaje
+              fitness. ¡Esperamos ansiosos tu mensaje!
             </p>
           </div>
-          <div className="flex items-center gap-1">
-            <BsFillTelephoneFill />
+          <div className="flex gap-1 text-center">
+            <FaWhatsapp className="text-xl" />
             +54 3564 575274
           </div>
         </div>

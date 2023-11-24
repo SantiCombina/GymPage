@@ -42,10 +42,10 @@ export const Gallery = () => {
   return (
     <section
       ref={galleryRef}
-      className="flex flex-col items-center justify-center w-full min-h-screen py-20 px-6 bg-secondary"
+      className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-20 bg-secondary"
     >
       <div className="flex flex-col items-center">
-        <h3 className="text-primary">MIRA COMO SE VE NUESTRO GYM</h3>
+        <h3 className="text-primary">MIRA CÓMO SE VE NUESTRO GYM</h3>
         <h2 className="text-3xl">CONOCE NUESTRO ESPACIO</h2>
       </div>
       <div className="flex justify-center py-5 max-w-notebook">
