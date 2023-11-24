@@ -1,12 +1,10 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
+import { priceCardMockup } from "../../mockups/price-card-mockup";
+import { PriceCard } from "../price-card";
 
 export const Prices = () => {
   const { pricesRef } = useContext(GlobalContext);
-
-  const cardStyle =
-    "sm:w-[350px] w-[320px] rounded-lg h-[550px] p-6 flex bg-[#191919] items-center flex-col justify-center gap-4 shadow-[inset_0_0_2px_0_rgb(209,213,219)] hover:border-2 hover:border-[#00C8FA]";
-  const buttonStyle = "border-2 text-lg rounded-md cursor-pointer border-[#00C8FA]/60 py-2 px-10 bg-transparent hover:bg-gray-700/50"
 
   return (
     <section
@@ -19,30 +17,16 @@ export const Prices = () => {
       </div>
       <div className="flex">
         <div className="flex flex-col items-center justify-center w-full gap-8 md:flex-row">
-          <div className={cardStyle}>
-            <h5>BÁSICO</h5>
-            <span className="text-3xl font-bold">$4500</span>
-            <li>2 horas de ejercicio</li>
-            <li>Libre consulta a profesores</li>
-            <li>Acceso a la comunidad</li>
-            <button className={buttonStyle}>COMPRAR AHORA</button>
-          </div>
-          <div className={cardStyle}>
-            <h5>PLUS</h5>
-            <span className="text-3xl font-bold">$5500</span>
-            <li>5 horas de ejercicio</li>
-            <li>Libre consulta a profesores</li>
-            <li>Acceso al minibar</li>
-            <button className={buttonStyle}>COMPRAR AHORA</button>
-          </div>
-          <div className={cardStyle}>
-            <h5>VIP</h5>
-            <span className="text-3xl font-bold">$6500</span>
-            <li>8 horas de ejercicio</li>
-            <li>Consulta a profesores privados</li>
-            <li>Indumentaria gratis</li>
-            <button className={buttonStyle}>COMPRAR AHORA</button>
-          </div>
+          {priceCardMockup.map((price) => (
+            <PriceCard
+              key={price.id}
+              plan={price.plan}
+              price={price.price}
+              first_item_list={price.first_item_list}
+              second_item_list={price.second_item_list}
+              third_item_list={price.third_item_list}
+            />
+          ))}
         </div>
       </div>
     </section>
