@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
 import { priceCardMockup } from "../../mockups/price-card-mockup";
-import { PriceCard } from "../price-card";
+import { PriceCard } from "../PriceCard";
 
 export const Prices = () => {
   const { pricesRef } = useContext(GlobalContext);
