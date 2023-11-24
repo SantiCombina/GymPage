@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalContext";
+import { useScroll } from "../../hooks/useScroll";
 
 export const Navbar = () => {
   const {
@@ -12,6 +13,8 @@ export const Navbar = () => {
     contactRef,
   } = useContext(GlobalContext);
 
+  const { isVisible } = useScroll({ scrollSize: 56 });
+
   const navStyle =
     "text-xl font-medium text-gray-300 cursor-pointer hover:text-white hover:underline";
 
@@ -20,9 +23,16 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 z-20 flex items-center justify-center w-full h-16">
-      <div className="flex justify-between items-center w-full max-w-notebook px-6">
-        <div className="flex gap-2 items-center">
+    <nav
+      className="fixed top-0 z-20 flex items-center justify-center w-full h-14"
+      style={{
+        background: isVisible
+          ? "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.3))"
+          : "",
+      }}
+    >
+      <div className="flex items-center justify-between w-full px-6 max-w-notebook">
+        <div className="flex items-center gap-2">
           <img src="/gym-logo.png" alt="gym logo" className="w-10" />
           <span
             onClick={() => scrollToRef(headerRef)}
