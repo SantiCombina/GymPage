@@ -1,10 +1,25 @@
-import { Gym } from "./pages/Gym";
+import { Layout } from "./components/ui/Layout";
+import {
+  About,
+  Gallery,
+  Header,
+  Prices,
+  Schedule,
+  Trainers,
+  Contact,
+} from "./components/sections";
 
 function App() {
   return (
-    <>
-      <Gym />
-    </>
+    <Layout>
+      <Header />
+      <About />
+      <Gallery />
+      <Schedule />
+      <Trainers />
+      <Prices />
+      <Contact />
+    </Layout>
   );
 }
 
