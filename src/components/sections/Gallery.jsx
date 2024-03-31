@@ -46,9 +46,9 @@ export const Gallery = () => {
     >
       <div className="flex flex-col items-center">
         <h3 className="text-primary">MIRA CÓMO SE VE NUESTRO GYM</h3>
-        <h2 className="text-3xl">CONOCE NUESTRO ESPACIO</h2>
+        <h2 className="text-3xl text-center">CONOCE NUESTRO ESPACIO</h2>
       </div>
-      <div className="flex justify-center py-5 max-w-notebook">
+      <div className="flex justify-center max-w-full py-5 md:max-w-notebook">
         <button onClick={slideToPrevItem} className="text-5xl">
           <SlArrowLeft />
         </button>
