@@ -43,7 +43,7 @@ export const Contact = () => {
         <div className="flex items-center justify-center w-full max-h-[400px] overflow-hidden">
           <MapContainer
             center={position}
-            style={{ width: "100%", height: "40vh" }}
+            style={{ width: "100%", height: "40vh", zIndex: 0 }}
             zoom={14}
             minZoom={4}
             scrollWheelZoom={false}
