@@ -16,7 +16,7 @@ export const Prices = () => {
         <h2 className="text-3xl">PRECIOS</h2>
       </div>
       <div className="flex">
-        <div className="flex flex-col items-center justify-center w-full gap-8 md:flex-row">
+        <div className="grid items-center justify-center w-full grid-cols-1 gap-8 lg:grid-cols-3">
           {priceCardMockup.map((price) => (
             <PriceCard
               key={price.id}
