@@ -25,7 +25,7 @@ export const About = () => {
         </p>
       </div>
       <img
-        src="./assets/aboutSection.png"
+        src="./assets/aboutSection.webp"
         alt="imagen"
         className="flex flex-1 object-contain select-none max-h-80"
       />
