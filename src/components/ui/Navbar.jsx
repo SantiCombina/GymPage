@@ -22,9 +22,7 @@ export const Navbar = () => {
   const breakpoint = useBreakpoint();
   const isMobile = breakpoint.is.sm || breakpoint.is.md;
 
-  const navStyle =
-    "text-xl font-medium text-gray-300 cursor-pointer hover:text-white hover:underline";
-  const navMobileStyle = "text-lg font-medium text-white";
+  const navStyle = isMobile ? "text-lg font-medium text-white" : "text-xl text-gray-300 cursor-pointer hover:text-white hover:underline"
 
   const scrollToRef = (ref) => {
     return ref.current.scrollIntoView({ behavior: "smooth" });
@@ -79,43 +77,43 @@ export const Navbar = () => {
           ) : (
             <ul className="flex-row hidden gap-8 list-none sm:flex">
               <li
-                className={navMobileStyle}
+                className={navStyle}
                 onClick={() => scrollToRef(headerRef)}
               >
                 Inicio
               </li>
               <li
-                className={navMobileStyle}
+                className={navStyle}
                 onClick={() => scrollToRef(aboutRef)}
               >
                 Nosotros
               </li>
               <li
-                className={navMobileStyle}
+                className={navStyle}
                 onClick={() => scrollToRef(galleryRef)}
               >
                 Galeria
               </li>
               <li
-                className={navMobileStyle}
+                className="text-xl leading-6 text-gray-300 cursor-pointer hover:text-white hover:underline"
                 onClick={() => scrollToRef(scheduleRef)}
               >
                 Horarios
               </li>
               <li
-                className={navMobileStyle}
+                className={navStyle}
                 onClick={() => scrollToRef(trainersRef)}
               >
                 Profesores
               </li>
               <li
-                className={navMobileStyle}
+                className={navStyle}
                 onClick={() => scrollToRef(pricesRef)}
               >
                 Precios
               </li>
               <li
-                className={navMobileStyle}
+                className={navStyle}
                 onClick={() => scrollToRef(contactRef)}
               >
                 Contacto
@@ -129,31 +127,31 @@ export const Navbar = () => {
               menuOpen ? "h-screen pt-40" : "h-0"
             } transition-all absolute left-0 top-14 w-screen bg-primary/95 overflow-hidden flex flex-col items-center justify-start gap-3 backdrop-blur-sm text-2xl`}
           >
-            <li className={navMobileStyle} onClick={() => menuLink(headerRef)}>
+            <li className={navStyle} onClick={() => menuLink(headerRef)}>
               Inicio
             </li>
-            <li className={navMobileStyle} onClick={() => menuLink(aboutRef)}>
+            <li className={navStyle} onClick={() => menuLink(aboutRef)}>
               Nosotros
             </li>
-            <li className={navMobileStyle} onClick={() => menuLink(galleryRef)}>
+            <li className={navStyle} onClick={() => menuLink(galleryRef)}>
               Galeria
             </li>
             <li
-              className={navMobileStyle}
+              className={navStyle}
               onClick={() => menuLink(scheduleRef)}
             >
               Horarios
             </li>
             <li
-              className={navMobileStyle}
+              className={navStyle}
               onClick={() => menuLink(trainersRef)}
             >
               Profesores
             </li>
-            <li className={navMobileStyle} onClick={() => menuLink(pricesRef)}>
+            <li className={navStyle} onClick={() => menuLink(pricesRef)}>
               Precios
             </li>
-            <li className={navMobileStyle} onClick={() => menuLink(contactRef)}>
+            <li className={navStyle} onClick={() => menuLink(contactRef)}>
               Contacto
             </li>
           </ul>
