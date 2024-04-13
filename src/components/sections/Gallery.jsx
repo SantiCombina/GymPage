@@ -59,8 +59,8 @@ export const Gallery = () => {
       className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-20 bg-secondary"
     >
       <div className="flex flex-col items-center">
-        <h3 className="text-primary">MIRA CÓMO SE VE NUESTRO GYM</h3>
-        <h2 className="text-3xl text-center">CONOCE NUESTRO ESPACIO</h2>
+        <h2 className="text-primary">MIRA CÓMO SE VE NUESTRO GYM</h2>
+        <h3 className="text-3xl text-center">CONOCE NUESTRO ESPACIO</h3>
       </div>
       <div className="flex justify-center max-w-full py-5 md:max-w-notebook">
         {!isMobile && (

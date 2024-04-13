@@ -9,8 +9,8 @@ export const About = () => {
       className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-20 lg:flex-row max-w-notebook"
     >
       <div className="flex flex-col flex-1 w-full">
-        <h3 className="text-primary">DESCUBRE MÁS</h3>
-        <h2 className="text-3xl">SOBRE NOSOTROS</h2>
+        <h2 className="text-primary">DESCUBRE MÁS</h2>
+        <h3 className="text-3xl">SOBRE NOSOTROS</h3>
         <p>
           ¡Bienvenido a nuestro gimnasio, donde la transformación personal se
           encuentra con la pasión por el bienestar! En nuestro espacio dedicado

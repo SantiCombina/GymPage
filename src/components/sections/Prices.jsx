@@ -12,8 +12,8 @@ export const Prices = () => {
       className="flex flex-col items-center justify-center w-full min-h-screen gap-4 px-6 py-20 max-w-notebook"
     >
       <div className="flex flex-col items-center">
-        <h3 className="text-primary">PRIMER CLASE GRATIS</h3>
-        <h2 className="text-3xl">PRECIOS</h2>
+        <h2 className="text-primary">PRIMER CLASE GRATIS</h2>
+        <h3 className="text-3xl">PRECIOS</h3>
       </div>
       <div className="flex">
         <div className="grid items-center justify-center w-full grid-cols-1 gap-8 lg:grid-cols-3">

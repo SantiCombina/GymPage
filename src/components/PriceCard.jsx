@@ -7,7 +7,7 @@ export function PriceCard({
 }) {
   return (
     <div className="sm:w-[350px] w-[320px] rounded-lg h-[500px] p-6 flex bg-[#191919] items-center flex-col justify-center gap-4 shadow-[inset_0_0_2px_0_rgb(209,213,219)] hover:border-2 hover:border-[#00C8FA]">
-      <h5>{plan}</h5>
+      {plan}
       <span className="text-3xl font-bold">{price}</span>
       <ul className="flex flex-col items-center gap-1 pt-8">
         <li>{first_item_list}</li>

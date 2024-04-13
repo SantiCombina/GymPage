@@ -26,8 +26,8 @@ export const Contact = () => {
       <div className="flex flex-col justify-between w-full p-6 rounded-lg bg-primary max-w-notebook md:flex-row">
         <div className="flex flex-col justify-between w-full gap-4">
           <div className="flex flex-col">
-            <h3 className="text-primary">CONTACTO</h3>
-            <h2 className="text-3xl">ESTAMOS ANSIOSIOS POR VERTE</h2>
+            <h2 className="text-primary">CONTACTO</h2>
+            <h3 className="text-3xl">ESTAMOS ANSIOSIOS POR VERTE</h3>
             <p>
               ¡Nos encantaría saber de ti! Si tienes preguntas, sugerencias o
               simplemente deseas conocernos mejor, no dudes en ponerte en

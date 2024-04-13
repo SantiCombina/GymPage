@@ -6,10 +6,10 @@ export const Schedule = () => {
   return (
     <section
       ref={scheduleRef}
-      className="flex flex-col items-center justify-center min-h-screen max-w-notebook w-full px-6 py-20"
+      className="flex flex-col items-center justify-center w-full min-h-screen px-6 py-20 max-w-notebook"
     >
-      <h3 className="text-primary">ACÉRCATE</h3>
-      <h2 className="text-3xl">HORARIO</h2>
+      <h2 className="text-primary">ACÉRCATE</h2>
+      <h3 className="text-3xl">HORARIO</h3>
     </section>
   );
 };
