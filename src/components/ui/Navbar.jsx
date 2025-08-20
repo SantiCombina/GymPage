@@ -24,7 +24,7 @@ export const Navbar = () => {
 
   const navStyle = isMobile 
     ? "text-lg font-medium text-white hover:text-primary transition-colors duration-300" 
-    : "text-lg text-gray-300 cursor-pointer hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#06C8D6] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
+    : "text-lg text-gray-300 cursor-pointer hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-px after:bg-[#F0160F] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
 
   const scrollToRef = (ref) => {
     return ref.current.scrollIntoView({ behavior: "smooth" });
@@ -62,14 +62,14 @@ export const Navbar = () => {
     >
       <div className="flex items-center justify-between w-full max-w-notebook">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-primary to-[#04A5B8] rounded-lg flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-br from-primary to-[#C01409] rounded-lg flex items-center justify-center">
             <img src="/gym-logo.png" alt="gym logo" className="w-6 h-6" />
           </div>
           <span
             onClick={() => scrollToRef(headerRef)}
             className="flex gap-1 text-xl font-bold text-white transition-colors duration-300 cursor-pointer hover:text-primary"
           >
-            FITNESS CENTER
+            CEMER
           </span>
         </div>
         <div>

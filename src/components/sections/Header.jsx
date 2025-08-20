@@ -16,7 +16,7 @@ export const Header = () => {
           Transforma tu cuerpo, fortalece tu mente y descubre tu mejor versión en nuestro gimnasio
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-[#06C8D6] hover:bg-[#04A5B8] text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button className="bg-[#F0160F] hover:bg-[#C01409] text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
             PRIMERA CLASE GRATIS
           </button>
           <button className="border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -25,15 +25,15 @@ export const Header = () => {
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="bg-black/30 backdrop-blur-sm p-4 rounded-lg">
-            <h3 className="text-2xl font-bold text-[#06C8D6] mb-2">500+</h3>
+            <h3 className="text-2xl font-bold text-[#F0160F] mb-2">500+</h3>
             <p className="text-gray-200">Miembros Activos</p>
           </div>
           <div className="bg-black/30 backdrop-blur-sm p-4 rounded-lg">
-            <h3 className="text-2xl font-bold text-[#06C8D6] mb-2">24/7</h3>
+            <h3 className="text-2xl font-bold text-[#F0160F] mb-2">24/7</h3>
             <p className="text-gray-200">Acceso Disponible</p>
           </div>
           <div className="bg-black/30 backdrop-blur-sm p-4 rounded-lg">
-            <h3 className="text-2xl font-bold text-[#06C8D6] mb-2">3+</h3>
+            <h3 className="text-2xl font-bold text-[#F0160F] mb-2">3+</h3>
             <p className="text-gray-200">Años de Experiencia</p>
           </div>
         </div>

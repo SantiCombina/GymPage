@@ -120,7 +120,7 @@ export const Gallery = () => {
             key={index}
             className={`${
               index === activeItem 
-                ? "bg-[#06C8D6] w-8 h-2" 
+                ? "bg-[#F0160F] w-8 h-2" 
                 : "bg-gray-500 w-2 h-2 hover:bg-gray-400"
             } block rounded-full transition-all duration-300 cursor-pointer`}
             onClick={() => handleDotClick(index)}

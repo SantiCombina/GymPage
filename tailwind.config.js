@@ -12,17 +12,17 @@ module.exports = {
         inter: ["Inter", "system-ui", "sans-serif"],
       },
       textColor: {
-        primary: "#06C8D6",
+        primary: "#F0160F",
       },
       backgroundColor: {
         primary: "#111111",
         secondary: "#151515",
       },
       borderColor: {
-        primary: "#06C8D6",
+        primary: "#F0160F",
       },
       colors: {
-        primary: "#06C8D6",
+        primary: "#F0160F",
       },
       animation: {
         'bounce-slow': 'bounce 2s infinite',

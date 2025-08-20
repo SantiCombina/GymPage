@@ -13,14 +13,14 @@
     width: 7px;
   }
   ::-webkit-scrollbar-thumb {
-    background: rgba(0, 200, 250);
+    background: rgba(240, 22, 15);
     border-radius: 20px;
   }
   ::-webkit-scrollbar-track {
     background: #111;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(0, 120, 250);
+    background: rgb(200, 18, 12);
     border-radius: 20px;
   }
 }

@@ -51,20 +51,20 @@ export const Trainers = () => {
           {trainersData.map((trainer) => (
             <div 
               key={trainer.id}
-              className="bg-primary p-6 rounded-lg border border-gray-700 hover:border-[#06C8D6] transition-all duration-300 hover:shadow-lg hover:shadow-[#06C8D6]/20 group"
+              className="bg-primary p-6 rounded-lg border border-gray-700 hover:border-[#F0160F] transition-all duration-300 hover:shadow-lg hover:shadow-[#F0160F]/20 group"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-[#06C8D6] to-[#04A5B8] rounded-full mx-auto mb-4 flex items-center justify-center">
+              <div className="w-24 h-24 bg-gradient-to-br from-[#F0160F] to-[#C01409] rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-2xl font-bold text-white">
                   {trainer.name.split(' ').map(n => n[0]).join('')}
                 </span>
               </div>
               
-              <h4 className="text-xl font-semibold text-center mb-2 group-hover:text-[#06C8D6] transition-colors">
+              <h4 className="text-xl font-semibold text-center mb-2 group-hover:text-[#F0160F] transition-colors">
                 {trainer.name}
               </h4>
               
               <div className="mb-4 text-center">
-                <span className="text-[#06C8D6] font-medium">{trainer.specialty}</span>
+                <span className="text-[#F0160F] font-medium">{trainer.specialty}</span>
                 <p className="mt-1 text-sm text-gray-400">{trainer.experience} de experiencia</p>
               </div>
               
@@ -73,7 +73,7 @@ export const Trainers = () => {
               </p>
               
               <div className="space-y-2">
-                <h5 className="text-sm font-semibold text-[#06C8D6]">Certificaciones:</h5>
+                <h5 className="text-sm font-semibold text-[#F0160F]">Certificaciones:</h5>
                 <div className="flex flex-wrap gap-2">
                   {trainer.certifications.map((cert, index) => (
                     <span 
