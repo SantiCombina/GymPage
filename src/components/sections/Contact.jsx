@@ -21,40 +21,61 @@ export const Contact = () => {
   return (
     <section
       ref={contactRef}
-      className="flex items-center justify-center w-full min-h-screen px-6 py-20 bg-secondary"
+      className="w-full flex justify-center items-center min-h-[100dvh] px-6 py-20 bg-secondary"
     >
-      <div className="flex flex-col justify-between w-full p-6 rounded-lg bg-primary max-w-notebook md:flex-row">
-        <div className="flex flex-col justify-between w-full gap-4">
+      <div className="flex items-center justify-center w-full max-w-notebook">
+        <div className="flex flex-col justify-between w-full gap-8 p-8 rounded-lg bg-primary md:flex-row">
+        <div className="flex flex-col justify-between w-full gap-6">
           <div className="flex flex-col">
-            <h2 className="text-primary">CONTACTO</h2>
-            <h3 className="text-3xl">ESTAMOS ANSIOSIOS POR VERTE</h3>
-            <p>
+            <h2 className="mb-2 text-lg tracking-widest text-primary">CONTACTO</h2>
+            <h3 className="mb-6 text-4xl font-bold">ESTAMOS ANSIOSOS POR VERTE</h3>
+            <p className="mb-6 text-lg leading-relaxed text-gray-300">
               ¡Nos encantaría saber de ti! Si tienes preguntas, sugerencias o
               simplemente deseas conocernos mejor, no dudes en ponerte en
               contacto. Estamos aquí para ayudarte en cada paso de tu viaje
-              fitness. ¡Esperamos ansiosos tu mensaje!
+              fitness.
             </p>
           </div>
-          <div className="flex gap-1 py-4 text-center">
-            <FaWhatsapp className="text-xl" />
-            +54 3564 575274
+          
+          <div className="space-y-4">
+            <div className="flex items-center gap-3 px-4 py-3 transition-colors rounded-lg bg-secondary hover:bg-secondary/80">
+              <FaWhatsapp className="text-2xl text-green-500" />
+              <div>
+                <p className="text-sm text-gray-400">WhatsApp</p>
+                <p className="font-semibold">+54 3564 575274</p>
+              </div>
+            </div>
+            
+            <div className="flex items-center gap-3 px-4 py-3 rounded-lg bg-secondary">
+              <div className="flex items-center justify-center w-6 h-6 rounded-full bg-primary">
+                <span className="text-sm text-white">📍</span>
+              </div>
+              <div>
+                <p className="text-sm text-gray-400">Ubicación</p>
+                <p className="font-semibold">Centro de la ciudad</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="flex items-center justify-center w-full max-h-[400px] overflow-hidden">
-          <MapContainer
-            center={position}
-            style={{ width: "100%", height: "40vh", zIndex: 0 }}
-            zoom={14}
-            minZoom={4}
-            scrollWheelZoom={false}
-          >
-            <TileLayer
-              attribution=""
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={position}></Marker>
-          </MapContainer>
+        
+        <div className="flex items-center justify-center w-full max-h-[500px] overflow-hidden">
+          <div className="w-full h-[400px] rounded-lg overflow-hidden border-2 border-gray-700">
+            <MapContainer
+              center={position}
+              style={{ width: "100%", height: "100%", zIndex: 0 }}
+              zoom={14}
+              minZoom={4}
+              scrollWheelZoom={false}
+            >
+              <TileLayer
+                attribution=""
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={position}></Marker>
+            </MapContainer>
+          </div>
         </div>
+      </div>
       </div>
     </section>
   );

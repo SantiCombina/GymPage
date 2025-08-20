@@ -22,7 +22,9 @@ export const Navbar = () => {
   const breakpoint = useBreakpoint();
   const isMobile = breakpoint.is.sm || breakpoint.is.md;
 
-  const navStyle = isMobile ? "text-lg font-medium text-white" : "text-xl text-gray-300 cursor-pointer hover:text-white hover:underline"
+  const navStyle = isMobile 
+    ? "text-lg font-medium text-white hover:text-primary transition-colors duration-300" 
+    : "text-lg text-gray-300 cursor-pointer hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-[#06C8D6] after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full"
 
   const scrollToRef = (ref) => {
     return ref.current.scrollIntoView({ behavior: "smooth" });
@@ -48,34 +50,40 @@ export const Navbar = () => {
   return (
     <nav
       className={`${
-        menuOpen ? "bg-primary backdrop-blur-sm" : ""
-      } fixed top-0 z-20 flex items-center justify-center w-full h-14`}
+        menuOpen ? "bg-primary/95 backdrop-blur-sm" : ""
+      } fixed top-0 z-20 flex items-center justify-center w-full h-16 transition-all duration-300`}
       style={{
         background:
           isVisible && !menuOpen
-            ? "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.3))"
+            ? "linear-gradient(to bottom, rgba(17,17,17,0.95), rgba(17,17,17,0.8))"
             : "",
+        backdropFilter: isVisible && !menuOpen ? "blur(10px)" : "",
       }}
     >
-      <div className="flex items-center justify-between w-full px-6 max-w-notebook">
-        <div className="flex items-center gap-2">
-          <img src="/gym-logo.png" alt="gym logo" className="w-10" />
+      <div className="flex items-center justify-between w-full max-w-notebook">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-primary to-[#04A5B8] rounded-lg flex items-center justify-center">
+            <img src="/gym-logo.png" alt="gym logo" className="w-6 h-6" />
+          </div>
           <span
             onClick={() => scrollToRef(headerRef)}
-            className="flex gap-1 text-xl font-bold text-white cursor-pointer"
+            className="flex gap-1 text-xl font-bold text-white transition-colors duration-300 cursor-pointer hover:text-primary"
           >
             FITNESS CENTER
           </span>
         </div>
         <div>
           {isMobile ? (
-            <Hamburger
-              color="white"
-              toggled={menuOpen}
-              onToggle={() => setMenuOpen(!menuOpen)}
-            />
+            <div className="relative z-30">
+              <Hamburger
+                color="white"
+                toggled={menuOpen}
+                onToggle={() => setMenuOpen(!menuOpen)}
+                size={24}
+              />
+            </div>
           ) : (
-            <ul className="flex-row hidden gap-8 list-none sm:flex">
+            <ul className="flex-row hidden gap-8 list-none lg:flex">
               <li
                 className={navStyle}
                 onClick={() => scrollToRef(headerRef)}
@@ -92,10 +100,10 @@ export const Navbar = () => {
                 className={navStyle}
                 onClick={() => scrollToRef(galleryRef)}
               >
-                Galeria
+                Galería
               </li>
               <li
-                className="text-xl leading-6 text-gray-300 cursor-pointer hover:text-white hover:underline"
+                className={navStyle}
                 onClick={() => scrollToRef(scheduleRef)}
               >
                 Horarios
@@ -124,8 +132,8 @@ export const Navbar = () => {
         {isMobile && (
           <ul
             className={`${
-              menuOpen ? "h-screen pt-40" : "h-0"
-            } transition-all absolute left-0 top-14 w-screen bg-primary/95 overflow-hidden flex flex-col items-center justify-start gap-3 backdrop-blur-sm text-2xl`}
+              menuOpen ? "h-screen pt-32 opacity-100" : "h-0 opacity-0"
+            } transition-all duration-500 absolute left-0 top-16 w-screen bg-primary/95 overflow-hidden flex flex-col items-center justify-start gap-6 backdrop-blur-md`}
           >
             <li className={navStyle} onClick={() => menuLink(headerRef)}>
               Inicio
@@ -134,7 +142,7 @@ export const Navbar = () => {
               Nosotros
             </li>
             <li className={navStyle} onClick={() => menuLink(galleryRef)}>
-              Galeria
+              Galería
             </li>
             <li
               className={navStyle}

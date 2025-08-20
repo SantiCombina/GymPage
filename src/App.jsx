@@ -1,4 +1,5 @@
-import { Layout } from "./components/ui/Layout";
+import { Navbar } from "./components/ui/Navbar";
+import { Footer } from "./components/ui/Footer";
 import {
   About,
   Gallery,
@@ -11,15 +12,19 @@ import {
 
 function App() {
   return (
-    <Layout>
-      <Header />
-      <About />
-      <Gallery />
-      <Schedule />
-      <Trainers />
-      <Prices />
-      <Contact />
-    </Layout>
+    <div className="min-h-[100dvh] font-inter">
+      <Navbar />
+      <div className="flex flex-col items-center justify-center text-white bg-primary">
+        <Header />
+        <About />
+        <Gallery />
+        <Schedule />
+        <Trainers />
+        <Prices />
+        <Contact />
+        <Footer />
+      </div>
+    </div>
   );
 }
 
